@@ -7,7 +7,7 @@ def prompt_gen(feeling):
 
     prompt  = "幫我挑選以下合適的衣服搭配：\n"
 
-    with open("data/clothes.csv") as csvfile:
+    with open("data/clothes.csv", encoding="utf-8") as csvfile:
         clothes_list = csv.reader(csvfile)
         next(clothes_list)
         print("Successfully read csv file")
@@ -16,7 +16,7 @@ def prompt_gen(feeling):
 
     prompt += "備註：{0}\n".format(feeling)
 
-    prompt += "請從上述衣物以及備註推薦搭配，只能回答id數字，最多五項，以空格區隔\n"
+    prompt += "請從上述衣物以及備註內容推薦搭配，只能回答id數字，最多五項，以空格區隔\n"
 
     prompt += "“輸出範例：“2 4 3”"
         
