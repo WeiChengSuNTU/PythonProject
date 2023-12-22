@@ -77,7 +77,7 @@ class MainWindow(QtWidgets.QMainWindow):
         GPTresponse = GPTresponse.split() #將chatGPT的回答切分成id list
         print(GPTresponse)
         image_paths = [] #建立list存放輸出照片的檔案途徑
-        with open("data/clothes.csv") as csvfile:
+        with open("data/clothes.csv", encoding="utf-8") as csvfile:
             clothes_list = csv.reader(csvfile) #將csv檔讀取成list
             next(clothes_list)
 
